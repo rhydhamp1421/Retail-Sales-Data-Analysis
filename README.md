@@ -1,19 +1,19 @@
 # Retail Sales Data Analysis
 
 ## Overview
-This project focuses on analyzing retail sales data to uncover patterns in sales trends, top-performing products, customer behavior, and revenue generation. By studying this data, we aim to provide insights that can help optimize sales strategies and enhance business performance.
+This project focuses on analyzing retail sales data to uncover patterns in sales trends, top-performing products, customer behavior, and revenue generation. By studying this data, the goal is to provide insights that can help optimize sales strategies and enhance business performance.
 
 ## Data Source
-The dataset used in this project was sourced from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting). It contains transaction records from three retail branches located in Mandalay, Yangon, and Naypyitaw.
+The dataset for this project is sourced from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting). It includes transaction records from three retail branches in Mandalay, Yangon, and Naypyitaw.
 
 ## Objectives
 - Determine the best-performing branches and product lines.
-- Analyze sales patterns across different timeframes.
+- Analyze sales patterns across different timeframes (daily, monthly).
 - Understand customer purchasing behavior.
 - Evaluate sales strategies and suggest improvements.
 
 ## Dataset Description
-The dataset consists of 1000 records and 17 columns. Below is an overview of the key attributes:
+The dataset contains 1000 records with the following key attributes:
 
 | Column | Description |
 | --- | --- |
@@ -37,42 +37,42 @@ The dataset consists of 1000 records and 17 columns. Below is an overview of the
 
 ## Analytical Approaches
 ### Product Analysis
-- Identify best and worst-performing product lines.
+- Identify the best and worst-performing product lines.
 - Analyze revenue contribution by each product line.
 - Determine the most popular payment method.
 
 ### Sales Analysis
 - Track sales trends over different days and months.
-- Identify peak sales hours and the busiest days.
+- Identify peak sales hours and busiest days.
 - Compare branch-wise sales performance.
 
 ### Customer Analysis
 - Segment customers based on purchasing patterns.
 - Analyze gender distribution per branch.
 - Determine the most profitable customer segment.
-- Identify the peak hours for customer ratings.
+- Identify peak hours for customer ratings.
 
 ## Data Processing Steps
 ### 1. Data Cleaning & Preprocessing
-- Checked and handled missing or inconsistent values.
+- Checked for and handled missing or inconsistent values.
 - Structured the dataset into an SQL database.
 - Enforced data integrity through constraints.
 
 ### 2. Feature Engineering
-- Added `time_of_day` to classify transactions into Morning, Afternoon, or Evening.
-- Extracted `day_name` and `month_name` to analyze sales trends by weekdays and months.
+- Added a `time_of_day` feature to classify transactions into Morning, Afternoon, or Evening.
+- Extracted `day_name` and `month_name` for analyzing sales trends by weekdays and months.
 
 ### 3. Exploratory Data Analysis (EDA)
-Conducted statistical and graphical analysis to extract business insights.
+Statistical and graphical analysis were conducted to extract key business insights.
 
 ## Key Business Insights
-1. Which city generates the highest revenue?
-2. What are the top-selling product lines?
-3. Which customer type contributes the most to revenue?
-4. Which month sees the highest sales?
-5. What are the busiest hours of the day for sales?
-6. Which gender purchases more frequently?
-7. What is the most commonly used payment method?
+- Which city generates the highest revenue?
+- What are the top-selling product lines?
+- Which customer type contributes the most to revenue?
+- Which month sees the highest sales?
+- What are the busiest hours of the day for sales?
+- Which gender purchases more frequently?
+- What is the most commonly used payment method?
 
 ## Revenue & Profit Formulas
 - **COGS (Cost of Goods Sold):** `unit_price * quantity`
@@ -88,9 +88,9 @@ For a transaction with:
 
 **Computed Values:**
 - `COGS = 45.79 * 7 = 320.53`
-- `VAT = 0.05 * 320.53 = 16.0265`
-- `Total Revenue = 320.53 + 16.0265 = 336.5565`
-- `Gross Margin = (16.0265 / 336.5565) * 100 ≈ 4.76%`
+- `VAT = 0.05 * 320.53 = 16.03`
+- `Total Revenue = 320.53 + 16.03 = 336.56`
+- `Gross Margin = (16.03 / 336.56) * 100 ≈ 4.76%`
 
 ## SQL Database Schema
 ```sql
@@ -121,9 +121,9 @@ CREATE TABLE IF NOT EXISTS sales(
 
 ## Technologies Used
 - **SQL (MySQL)** for database management and querying.
-- **Python** for data analysis and visualization.
-- **Pandas & NumPy** for data manipulation.
-- **Matplotlib & Seaborn** for creating visual reports.
+- **Excel** for data manipulation and analysis.
+- **Pandas & NumPy** for calculations (in Excel).
+- **Matplotlib & Seaborn** (optional for visualization if needed).
 
 ## Key Findings
 - The **Evening** had the highest sales volume.
@@ -132,16 +132,13 @@ CREATE TABLE IF NOT EXISTS sales(
 - **Credit Card** was the most frequently used payment method.
 
 ## Conclusion
-This project provides valuable insights into retail sales data, helping to optimize sales strategies and improve customer experience. Future enhancements could include deeper machine learning-based predictive analytics.
+This project provides valuable insights into retail sales data, helping businesses optimize sales strategies and improve customer experience. Future enhancements could involve advanced forecasting techniques or deeper machine learning-based analysis.
 
 ## How to Use This Project
 1. Clone the repository.
-2. Import the dataset into a SQL database.
+2. Import the dataset into an SQL database.
 3. Run SQL queries to extract insights.
-4. Use Python for advanced analysis and visualizations.
+4. Use Excel for advanced data analysis and visualization.
 
 ## Author
 Rhydham Prajapati
-
-
-
